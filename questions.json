@@ -1,0 +1,2008 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "questionTitle": "1. What's the output?",
+      "questionContent": "function sayHi() {\n  console.log(name);\n  console.log(age);\n  var name = 'Lydia';\n  let age = 21;\n}\n\nsayHi();",
+      "questionOptions": [
+        "A: Lydia and undefined",
+        "B: Lydia and ReferenceError",
+        "C: ReferenceError and 21",
+        "D: undefined and ReferenceError"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#1-whats-the-output"
+    },
+    {
+      "id": 2,
+      "questionTitle": "2. What's the output?",
+      "questionContent": "for (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 1);\n}\n\nfor (let i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 1);\n}",
+      "questionOptions": [
+        "A: 0 1 2 and 0 1 2",
+        "B: 0 1 2 and 3 3 3",
+        "C: 3 3 3 and 0 1 2"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#2-whats-the-output"
+    },
+    {
+      "id": 3,
+      "questionTitle": "3. What's the output?",
+      "questionContent": "const shape = {\n  radius: 10,\n  diameter() {\n    return this.radius * 2;\n  },\n  perimeter: () => 2 * Math.PI * this.radius,\n};\n\nconsole.log(shape.diameter());\nconsole.log(shape.perimeter());",
+      "questionOptions": [
+        "A: 20 and 62.83185307179586",
+        "B: 20 and NaN",
+        "C: 20 and 63",
+        "D: NaN and 63"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#3-whats-the-output"
+    },
+    {
+      "id": 4,
+      "questionTitle": "4. What's the output?",
+      "questionContent": "+true;\n!'Lydia';",
+      "questionOptions": [
+        "A: 1 and false",
+        "B: false and NaN",
+        "C: false and false"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#4-whats-the-output"
+    },
+    {
+      "id": 5,
+      "questionTitle": "5. Which one is true?",
+      "questionContent": "const bird = {\n  size: 'small',\n};\n\nconst mouse = {\n  name: 'Mickey',\n  small: true,\n};",
+      "questionOptions": [
+        "A: mouse.bird.size is not valid",
+        "B: mouse[bird.size] is not valid",
+        "C: mouse[bird[\"size\"]] is not valid",
+        "D: All of them are valid"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#5-which-one-is-true"
+    },
+    {
+      "id": 6,
+      "questionTitle": "6. What's the output?",
+      "questionContent": "let c = { greeting: 'Hey!' };\nlet d;\n\nd = c;\nc.greeting = 'Hello';\nconsole.log(d.greeting);",
+      "questionOptions": [
+        "A: Hello",
+        "B: Hey!",
+        "C: undefined",
+        "D: ReferenceError",
+        "E: TypeError"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#6-whats-the-output"
+    },
+    {
+      "id": 7,
+      "questionTitle": "7. What's the output?",
+      "questionContent": "let a = 3;\nlet b = new Number(3);\nlet c = 3;\n\nconsole.log(a == b);\nconsole.log(a === b);\nconsole.log(b === c);",
+      "questionOptions": [
+        "A: true false true",
+        "B: false false true",
+        "C: true false false",
+        "D: false true true"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#7-whats-the-output"
+    },
+    {
+      "id": 8,
+      "questionTitle": "8. What's the output?",
+      "questionContent": "class Chameleon {\n  static colorChange(newColor) {\n    this.newColor = newColor;\n    return this.newColor;\n  }\n\n  constructor({ newColor = 'green' } = {}) {\n    this.newColor = newColor;\n  }\n}\n\nconst freddie = new Chameleon({ newColor: 'purple' });\nconsole.log(freddie.colorChange('orange'));",
+      "questionOptions": [
+        "A: orange",
+        "B: purple",
+        "C: green",
+        "D: TypeError"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#8-whats-the-output"
+    },
+    {
+      "id": 9,
+      "questionTitle": "9. What's the output?",
+      "questionContent": "let greeting;\ngreetign = {}; // Typo!\nconsole.log(greetign);",
+      "questionOptions": [
+        "A: {}",
+        "B: ReferenceError: greetign is not defined",
+        "C: undefined"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#9-whats-the-output"
+    },
+    {
+      "id": 10,
+      "questionTitle": "10. What happens when we do this?",
+      "questionContent": "function bark() {\n  console.log('Woof!');\n}\n\nbark.animal = 'dog';",
+      "questionOptions": [
+        "A: Nothing, this is totally fine!",
+        "B: SyntaxError. You cannot add properties to a function this way.",
+        "C: \"Woof\" gets logged.",
+        "D: ReferenceError"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#10-what-happens-when-we-do-this"
+    },
+    {
+      "id": 11,
+      "questionTitle": "11. What's the output?",
+      "questionContent": "function Person(firstName, lastName) {\n  this.firstName = firstName;\n  this.lastName = lastName;\n}\n\nconst member = new Person('Lydia', 'Hallie');\nPerson.getFullName = function() {\n  return `${this.firstName} ${this.lastName}`;\n};\n\nconsole.log(member.getFullName());",
+      "questionOptions": [
+        "A: TypeError",
+        "B: SyntaxError",
+        "C: Lydia Hallie",
+        "D: undefined undefined"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#11-whats-the-output"
+    },
+    {
+      "id": 12,
+      "questionTitle": "12. What's the output?",
+      "questionContent": "function Person(firstName, lastName) {\n  this.firstName = firstName;\n  this.lastName = lastName;\n}\n\nconst lydia = new Person('Lydia', 'Hallie');\nconst sarah = Person('Sarah', 'Smith');\n\nconsole.log(lydia);\nconsole.log(sarah);",
+      "questionOptions": [
+        "A: Person {firstName: \"Lydia\", lastName: \"Hallie\"} and undefined",
+        "B: Person {firstName: \"Lydia\", lastName: \"Hallie\"} and Person {firstName: \"Sarah\", lastName: \"Smith\"}",
+        "C: Person {firstName: \"Lydia\", lastName: \"Hallie\"} and {}",
+        "D: Person {firstName: \"Lydia\", lastName: \"Hallie\"} and ReferenceError"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#12-whats-the-output"
+    },
+    {
+      "id": 13,
+      "questionTitle": "13. What are the three phases of event propagation?",
+      "questionContent": "",
+      "questionOptions": [
+        "A: Target > Capturing > Bubbling",
+        "B: Bubbling > Target > Capturing",
+        "C: Target > Bubbling > Capturing",
+        "D: Capturing > Target > Bubbling"
+      ],
+      "questionAnswer": "",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#13-what-are-the-three-phases-of-event-propagation"
+    },
+    {
+      "id": 14,
+      "questionTitle": "14. All object have prototypes.",
+      "questionContent": "",
+      "questionOptions": [
+        "A: true",
+        "B: false"
+      ],
+      "questionAnswer": "",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#14-all-object-have-prototypes"
+    },
+    {
+      "id": 15,
+      "questionTitle": "15. What's the output?",
+      "questionContent": "function sum(a, b) {\n  return a + b;\n}\n\nsum(1, '2');",
+      "questionOptions": [
+        "A: NaN",
+        "B: TypeError",
+        "C: \"12\"",
+        "D: 3"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#15-whats-the-output"
+    },
+    {
+      "id": 16,
+      "questionTitle": "16. What's the output?",
+      "questionContent": "let number = 0;\nconsole.log(number++);\nconsole.log(++number);\nconsole.log(number);",
+      "questionOptions": [
+        "A: 1 1 2",
+        "B: 1 2 2",
+        "C: 0 2 2",
+        "D: 0 1 2"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#16-whats-the-output"
+    },
+    {
+      "id": 17,
+      "questionTitle": "17. What's the output?",
+      "questionContent": "function getPersonInfo(one, two, three) {\n  console.log(one);\n  console.log(two);\n  console.log(three);\n}\n\nconst person = 'Lydia';\nconst age = 21;\n\ngetPersonInfo`${person} is ${age} years old`;",
+      "questionOptions": [
+        "A: \"Lydia\" 21 [\"\", \" is \", \" years old\"]",
+        "B: [\"\", \" is \", \" years old\"] \"Lydia\" 21",
+        "C: \"Lydia\" [\"\", \" is \", \" years old\"] 21"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#17-whats-the-output"
+    },
+    {
+      "id": 18,
+      "questionTitle": "18. What's the output?",
+      "questionContent": "function checkAge(data) {\n  if (data === { age: 18 }) {\n    console.log('You are an adult!');\n  } else if (data == { age: 18 }) {\n    console.log('You are still an adult.');\n  } else {\n    console.log(`Hmm.. You don't have an age I guess`);\n  }\n}\n\ncheckAge({ age: 18 });",
+      "questionOptions": [
+        "A: You are an adult!",
+        "B: You are still an adult.",
+        "C: Hmm.. You don't have an age I guess"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#18-whats-the-output"
+    },
+    {
+      "id": 19,
+      "questionTitle": "19. What's the output?",
+      "questionContent": "function getAge(...args) {\n  console.log(typeof args);\n}\n\ngetAge(21);",
+      "questionOptions": [
+        "A: \"number\"",
+        "B: \"array\"",
+        "C: \"object\"",
+        "D: \"NaN\""
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#19-whats-the-output"
+    },
+    {
+      "id": 20,
+      "questionTitle": "20. What's the output?",
+      "questionContent": "function getAge() {\n  'use strict';\n  age = 21;\n  console.log(age);\n}\n\ngetAge();",
+      "questionOptions": [
+        "A: 21",
+        "B: undefined",
+        "C: ReferenceError",
+        "D: TypeError"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#20-whats-the-output"
+    },
+    {
+      "id": 21,
+      "questionTitle": "21. What's the value of sum?",
+      "questionContent": "const sum = eval('10*10+5');",
+      "questionOptions": [
+        "A: 105",
+        "B: \"105\"",
+        "C: TypeError",
+        "D: \"10*10+5\""
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#21-whats-the-value-of-sum"
+    },
+    {
+      "id": 22,
+      "questionTitle": "22. How long is cool_secret accessible?",
+      "questionContent": "sessionStorage.setItem('cool_secret', 123);",
+      "questionOptions": [
+        "A: Forever, the data doesn't get lost.",
+        "B: When the user closes the tab.",
+        "C: When the user closes the entire browser, not only the tab.",
+        "D: When the user shuts off their computer."
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#22-how-long-is-cool_secret-accessible"
+    },
+    {
+      "id": 23,
+      "questionTitle": "23. What's the output?",
+      "questionContent": "var num = 8;\nvar num = 10;\n\nconsole.log(num);",
+      "questionOptions": [
+        "A: 8",
+        "B: 10",
+        "C: SyntaxError",
+        "D: ReferenceError"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#23-whats-the-output"
+    },
+    {
+      "id": 24,
+      "questionTitle": "24. What's the output?",
+      "questionContent": "const obj = { 1: 'a', 2: 'b', 3: 'c' };\nconst set = new Set([1, 2, 3, 4, 5]);\n\nobj.hasOwnProperty('1');\nobj.hasOwnProperty(1);\nset.has('1');\nset.has(1);",
+      "questionOptions": [
+        "A: false true false true",
+        "B: false true true true",
+        "C: true true false true",
+        "D: true true true true"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#24-whats-the-output"
+    },
+    {
+      "id": 25,
+      "questionTitle": "25. What's the output?",
+      "questionContent": "const obj = { a: 'one', b: 'two', a: 'three' };\nconsole.log(obj);",
+      "questionOptions": [
+        "A: { a: \"one\", b: \"two\" }",
+        "B: { b: \"two\", a: \"three\" }",
+        "C: { a: \"three\", b: \"two\" }",
+        "D: SyntaxError"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#25-whats-the-output"
+    },
+    {
+      "id": 26,
+      "questionTitle": "26. The JavaScript global execution context creates two things for you: the global object, and the \"this\" keyword.",
+      "questionContent": "",
+      "questionOptions": [
+        "A: true",
+        "B: false",
+        "C: it depends"
+      ],
+      "questionAnswer": "",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#26-the-javascript-global-execution-context-creates-two-things-for-you-the-global-object-and-the-this-keyword"
+    },
+    {
+      "id": 27,
+      "questionTitle": "27. What's the output?",
+      "questionContent": "for (let i = 1; i < 5; i++) {\n  if (i === 3) continue;\n  console.log(i);\n}",
+      "questionOptions": [
+        "A: 1 2",
+        "B: 1 2 3",
+        "C: 1 2 4",
+        "D: 1 3 4"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#27-whats-the-output"
+    },
+    {
+      "id": 28,
+      "questionTitle": "28. What's the output?",
+      "questionContent": "String.prototype.giveLydiaPizza = () => {\n  return 'Just give Lydia pizza already!';\n};\n\nconst name = 'Lydia';\n\nconsole.log(name.giveLydiaPizza())",
+      "questionOptions": [
+        "A: \"Just give Lydia pizza already!\"",
+        "B: TypeError: not a function",
+        "C: SyntaxError",
+        "D: undefined"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#28-whats-the-output"
+    },
+    {
+      "id": 29,
+      "questionTitle": "29. What's the output?",
+      "questionContent": "const a = {};\nconst b = { key: 'b' };\nconst c = { key: 'c' };\n\na[b] = 123;\na[c] = 456;\n\nconsole.log(a[b]);",
+      "questionOptions": [
+        "A: 123",
+        "B: 456",
+        "C: undefined",
+        "D: ReferenceError"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#29-whats-the-output"
+    },
+    {
+      "id": 30,
+      "questionTitle": "30. What's the output?",
+      "questionContent": "const foo = () => console.log('First');\nconst bar = () => setTimeout(() => console.log('Second'));\nconst baz = () => console.log('Third');\n\nbar();\nfoo();\nbaz();",
+      "questionOptions": [
+        "A: First Second Third",
+        "B: First Third Second",
+        "C: Second First Third",
+        "D: Second Third First"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#30-whats-the-output"
+    },
+    {
+      "id": 31,
+      "questionTitle": "31. What is the event.target when clicking the button?",
+      "questionContent": "<div onclick=\"console.log('first div')\">\n  <div onclick=\"console.log('second div')\">\n    <button onclick=\"console.log('button')\">\n      Click!\n    </button>\n  </div>\n</div>",
+      "questionOptions": [
+        "A: Outer div",
+        "B: Inner div",
+        "C: button",
+        "D: An array of all nested elements."
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#31-what-is-the-eventtarget-when-clicking-the-button"
+    },
+    {
+      "id": 32,
+      "questionTitle": "32. When you click the paragraph, what's the logged output?",
+      "questionContent": "<div onclick=\"console.log('div')\">\n  <p onclick=\"console.log('p')\">\n    Click here!\n  </p>\n</div>",
+      "questionOptions": [
+        "A: p div",
+        "B: div p",
+        "C: p",
+        "D: div"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#32-when-you-click-the-paragraph-whats-the-logged-output"
+    },
+    {
+      "id": 33,
+      "questionTitle": "33. What's the output?",
+      "questionContent": "const person = { name: 'Lydia' };\n\nfunction sayHi(age) {\n  return `${this.name} is ${age}`;\n}\n\nconsole.log(sayHi.call(person, 21));\nconsole.log(sayHi.bind(person, 21));",
+      "questionOptions": [
+        "A: undefined is 21 Lydia is 21",
+        "B: function function",
+        "C: Lydia is 21 Lydia is 21",
+        "D: Lydia is 21 function"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#33-whats-the-output"
+    },
+    {
+      "id": 34,
+      "questionTitle": "34. What's the output?",
+      "questionContent": "function sayHi() {\n  return (() => 0)();\n}\n\nconsole.log(typeof sayHi());",
+      "questionOptions": [
+        "A: \"object\"",
+        "B: \"number\"",
+        "C: \"function\"",
+        "D: \"undefined\""
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#34-whats-the-output"
+    },
+    {
+      "id": 35,
+      "questionTitle": "35. Which of these values are falsy?",
+      "questionContent": "0;\nnew Number(0);\n('');\n(' ');\nnew Boolean(false);\nundefined;",
+      "questionOptions": [
+        "A: 0, '', undefined",
+        "B: 0, new Number(0), '', new Boolean(false), undefined",
+        "C: 0, '', new Boolean(false), undefined",
+        "D: All of them are falsy"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#35-which-of-these-values-are-falsy"
+    },
+    {
+      "id": 36,
+      "questionTitle": "36. What's the output?",
+      "questionContent": "console.log(typeof typeof 1);",
+      "questionOptions": [
+        "A: \"number\"",
+        "B: \"string\"",
+        "C: \"object\"",
+        "D: \"undefined\""
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#36-whats-the-output"
+    },
+    {
+      "id": 37,
+      "questionTitle": "37. What's the output?",
+      "questionContent": "const numbers = [1, 2, 3];\nnumbers[10] = 11;\nconsole.log(numbers);",
+      "questionOptions": [
+        "A: [1, 2, 3, null x 7, 11]",
+        "B: [1, 2, 3, 11]",
+        "C: [1, 2, 3, empty x 7, 11]",
+        "D: SyntaxError"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#37-whats-the-output"
+    },
+    {
+      "id": 38,
+      "questionTitle": "38. What's the output?",
+      "questionContent": "(() => {\n  let x, y;\n  try {\n    throw new Error();\n  } catch (x) {\n    (x = 1), (y = 2);\n    console.log(x);\n  }\n  console.log(x);\n  console.log(y);\n})();",
+      "questionOptions": [
+        "A: 1 undefined 2",
+        "B: undefined undefined undefined",
+        "C: 1 1 2",
+        "D: 1 undefined undefined"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#38-whats-the-output"
+    },
+    {
+      "id": 39,
+      "questionTitle": "39. Everything in JavaScript is either a...",
+      "questionContent": "",
+      "questionOptions": [
+        "A: primitive or object",
+        "B: function or object",
+        "C: trick question! only objects",
+        "D: number or object"
+      ],
+      "questionAnswer": "",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#39-everything-in-javascript-is-either-a"
+    },
+    {
+      "id": 40,
+      "questionTitle": "40. What's the output?",
+      "questionContent": "[[0, 1], [2, 3]].reduce(\n  (acc, cur) => {\n    return acc.concat(cur);\n  },\n  [1, 2],\n);",
+      "questionOptions": [
+        "A: [0, 1, 2, 3, 1, 2]",
+        "B: [6, 1, 2]",
+        "C: [1, 2, 0, 1, 2, 3]",
+        "D: [1, 2, 6]"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#40-whats-the-output"
+    },
+    {
+      "id": 41,
+      "questionTitle": "41. What's the output?",
+      "questionContent": "!!null;\n!!'';\n!!1;",
+      "questionOptions": [
+        "A: false true false",
+        "B: false false true",
+        "C: false true true",
+        "D: true true false"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#41-whats-the-output"
+    },
+    {
+      "id": 42,
+      "questionTitle": "42. What does the setInterval method return in the browser?",
+      "questionContent": "setInterval(() => console.log('Hi'), 1000);",
+      "questionOptions": [
+        "A: a unique id",
+        "B: the amount of milliseconds specified",
+        "C: the passed function",
+        "D: undefined"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#42-what-does-the-setinterval-method-return-in-the-browser"
+    },
+    {
+      "id": 43,
+      "questionTitle": "43. What does this return?",
+      "questionContent": "[...'Lydia'];",
+      "questionOptions": [
+        "A: [\"L\", \"y\", \"d\", \"i\", \"a\"]",
+        "B: [\"Lydia\"]",
+        "C: [[], \"Lydia\"]",
+        "D: [[\"L\", \"y\", \"d\", \"i\", \"a\"]]"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#43-what-does-this-return"
+    },
+    {
+      "id": 44,
+      "questionTitle": "44. What's the output?",
+      "questionContent": "function* generator(i) {\n  yield i;\n  yield i * 2;\n}\n\nconst gen = generator(10);\n\nconsole.log(gen.next().value);\nconsole.log(gen.next().value);",
+      "questionOptions": [
+        "A: [0, 10], [10, 20]",
+        "B: 20, 20",
+        "C: 10, 20",
+        "D: 0, 10 and 10, 20"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#44-whats-the-output"
+    },
+    {
+      "id": 45,
+      "questionTitle": "45. What does this return?",
+      "questionContent": "const firstPromise = new Promise((res, rej) => {\n  setTimeout(res, 500, 'one');\n});\n\nconst secondPromise = new Promise((res, rej) => {\n  setTimeout(res, 100, 'two');\n});\n\nPromise.race([firstPromise, secondPromise]).then(res => console.log(res));",
+      "questionOptions": [
+        "A: \"one\"",
+        "B: \"two\"",
+        "C: \"two\" \"one\"",
+        "D: \"one\" \"two\""
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#45-what-does-this-return"
+    },
+    {
+      "id": 46,
+      "questionTitle": "46. What's the output?",
+      "questionContent": "let person = { name: 'Lydia' };\nconst members = [person];\nperson = null;\n\nconsole.log(members);",
+      "questionOptions": [
+        "A: null",
+        "B: [null]",
+        "C: [{}]",
+        "D: [{ name: \"Lydia\" }]"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#46-whats-the-output"
+    },
+    {
+      "id": 47,
+      "questionTitle": "47. What's the output?",
+      "questionContent": "const person = {\n  name: 'Lydia',\n  age: 21,\n};\n\nfor (const item in person) {\n  console.log(item);\n}",
+      "questionOptions": [
+        "A: { name: \"Lydia\" }, { age: 21 }",
+        "B: \"name\", \"age\"",
+        "C: \"Lydia\", 21",
+        "D: [\"name\", \"Lydia\"], [\"age\", 21]"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#47-whats-the-output"
+    },
+    {
+      "id": 48,
+      "questionTitle": "48. What's the output?",
+      "questionContent": "console.log(3 + 4 + '5');",
+      "questionOptions": [
+        "A: \"345\"",
+        "B: \"75\"",
+        "C: 12",
+        "D: \"12\""
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#48-whats-the-output"
+    },
+    {
+      "id": 49,
+      "questionTitle": "49. What's the value of num?",
+      "questionContent": "const num = parseInt('7*6', 10);",
+      "questionOptions": [
+        "A: 42",
+        "B: \"42\"",
+        "C: 7",
+        "D: NaN"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#49-whats-the-value-of-num"
+    },
+    {
+      "id": 50,
+      "questionTitle": "50. What's the output?",
+      "questionContent": "[1, 2, 3].map(num => {\n  if (typeof num === 'number') return;\n  return num * 2;\n});",
+      "questionOptions": [
+        "A: []",
+        "B: [null, null, null]",
+        "C: [undefined, undefined, undefined]",
+        "D: [ 3 x empty ]"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#50-whats-the-output"
+    },
+    {
+      "id": 51,
+      "questionTitle": "51. What's the output?",
+      "questionContent": "function getInfo(member, year) {\n  member.name = 'Lydia';\n  year = '1998';\n}\n\nconst person = { name: 'Sarah' };\nconst birthYear = '1997';\n\ngetInfo(person, birthYear);\n\nconsole.log(person, birthYear);",
+      "questionOptions": [
+        "A: { name: \"Lydia\" }, \"1997\"",
+        "B: { name: \"Sarah\" }, \"1998\"",
+        "C: { name: \"Lydia\" }, \"1998\"",
+        "D: { name: \"Sarah\" }, \"1997\""
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#51-whats-the-output"
+    },
+    {
+      "id": 52,
+      "questionTitle": "52. What's the output?",
+      "questionContent": "function greeting() {\n  throw 'Hello world!';\n}\n\nfunction sayHi() {\n  try {\n    const data = greeting();\n    console.log('It worked!', data);\n  } catch (e) {\n    console.log('Oh no an error:', e);\n  }\n}\n\nsayHi();",
+      "questionOptions": [
+        "A: It worked! Hello world!",
+        "B: Oh no an error: undefined",
+        "C: SyntaxError: can only throw Error objects",
+        "D: Oh no an error: Hello world!"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#52-whats-the-output"
+    },
+    {
+      "id": 53,
+      "questionTitle": "53. What's the output?",
+      "questionContent": "function Car() {\n  this.make = 'Lamborghini';\n  return { make: 'Maserati' };\n}\n\nconst myCar = new Car();\nconsole.log(myCar.make);",
+      "questionOptions": [
+        "A: \"Lamborghini\"",
+        "B: \"Maserati\"",
+        "C: ReferenceError",
+        "D: TypeError"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#53-whats-the-output"
+    },
+    {
+      "id": 54,
+      "questionTitle": "54. What's the output?",
+      "questionContent": "(() => {\n  let x = (y = 10);\n})();\n\nconsole.log(typeof x);\nconsole.log(typeof y);",
+      "questionOptions": [
+        "A: \"undefined\", \"number\"",
+        "B: \"number\", \"number\"",
+        "C: \"object\", \"number\"",
+        "D: \"number\", \"undefined\""
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#54-whats-the-output"
+    },
+    {
+      "id": 55,
+      "questionTitle": "55. What's the output?",
+      "questionContent": "class Dog {\n  constructor(name) {\n    this.name = name;\n  }\n}\n\nDog.prototype.bark = function() {\n  console.log(`Woof I am ${this.name}`);\n};\n\nconst pet = new Dog('Mara');\n\npet.bark();\n\ndelete Dog.prototype.bark;\n\npet.bark();",
+      "questionOptions": [
+        "A: \"Woof I am Mara\", TypeError",
+        "B: \"Woof I am Mara\", \"Woof I am Mara\"",
+        "C: \"Woof I am Mara\", undefined",
+        "D: TypeError, TypeError"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#55-whats-the-output"
+    },
+    {
+      "id": 56,
+      "questionTitle": "56. What's the output?",
+      "questionContent": "const set = new Set([1, 1, 2, 3, 4]);\n\nconsole.log(set);",
+      "questionOptions": [
+        "A: [1, 1, 2, 3, 4]",
+        "B: [1, 2, 3, 4]",
+        "C: {1, 1, 2, 3, 4}",
+        "D: {1, 2, 3, 4}"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#56-whats-the-output"
+    },
+    {
+      "id": 57,
+      "questionTitle": "57. What's the output?",
+      "questionContent": "// counter.js\nlet counter = 10;\nexport default counter;",
+      "questionOptions": [
+        "A: 10",
+        "B: 11",
+        "C: Error",
+        "D: NaN"
+      ],
+      "questionAnswer": "",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#57-whats-the-output"
+    },
+    {
+      "id": 58,
+      "questionTitle": "58. What's the output?",
+      "questionContent": "const name = 'Lydia';\nage = 21;\n\nconsole.log(delete name);\nconsole.log(delete age);",
+      "questionOptions": [
+        "A: false, true",
+        "B: \"Lydia\", 21",
+        "C: true, true",
+        "D: undefined, undefined"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#58-whats-the-output"
+    },
+    {
+      "id": 59,
+      "questionTitle": "59. What's the output?",
+      "questionContent": "const numbers = [1, 2, 3, 4, 5];\nconst [y] = numbers;\n\nconsole.log(y);",
+      "questionOptions": [
+        "A: [[1, 2, 3, 4, 5]]",
+        "B: [1, 2, 3, 4, 5]",
+        "C: 1",
+        "D: [1]"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#59-whats-the-output"
+    },
+    {
+      "id": 60,
+      "questionTitle": "60. What's the output?",
+      "questionContent": "const user = { name: 'Lydia', age: 21 };\nconst admin = { admin: true, ...user };\n\nconsole.log(admin);",
+      "questionOptions": [
+        "A: { admin: true, user: { name: \"Lydia\", age: 21 } }",
+        "B: { admin: true, name: \"Lydia\", age: 21 }",
+        "C: { admin: true, user: [\"Lydia\", 21] }",
+        "D: { admin: true }"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#60-whats-the-output"
+    },
+    {
+      "id": 61,
+      "questionTitle": "61. What's the output?",
+      "questionContent": "const person = { name: 'Lydia' };\n\nObject.defineProperty(person, 'age', { value: 21 });\n\nconsole.log(person);\nconsole.log(Object.keys(person));",
+      "questionOptions": [
+        "A: { name: \"Lydia\", age: 21 }, [\"name\", \"age\"]",
+        "B: { name: \"Lydia\", age: 21 }, [\"name\"]",
+        "C: { name: \"Lydia\"}, [\"name\", \"age\"]",
+        "D: { name: \"Lydia\"}, [\"age\"]"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#61-whats-the-output"
+    },
+    {
+      "id": 62,
+      "questionTitle": "62. What's the output?",
+      "questionContent": "const settings = {\n  username: 'lydiahallie',\n  level: 19,\n  health: 90,\n};\n\nconst data = JSON.stringify(settings, ['level', 'health']);\nconsole.log(data);",
+      "questionOptions": [
+        "A: \"{\"level\":19, \"health\":90}\"",
+        "B: \"{\"username\": \"lydiahallie\"}\"",
+        "C: \"[\"level\", \"health\"]\"",
+        "D: \"{\"username\": \"lydiahallie\", \"level\":19, \"health\":90}\""
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#62-whats-the-output"
+    },
+    {
+      "id": 63,
+      "questionTitle": "63. What's the output?",
+      "questionContent": "let num = 10;\n\nconst increaseNumber = () => num++;\nconst increasePassedNumber = number => number++;\n\nconst num1 = increaseNumber();\nconst num2 = increasePassedNumber(num1);\n\nconsole.log(num1);\nconsole.log(num2);",
+      "questionOptions": [
+        "A: 10, 10",
+        "B: 10, 11",
+        "C: 11, 11",
+        "D: 11, 12"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#63-whats-the-output"
+    },
+    {
+      "id": 64,
+      "questionTitle": "64. What's the output?",
+      "questionContent": "const value = { number: 10 };\n\nconst multiply = (x = { ...value }) => {\n  console.log((x.number *= 2));\n};\n\nmultiply();\nmultiply();\nmultiply(value);\nmultiply(value);",
+      "questionOptions": [
+        "A: 20, 40, 80, 160",
+        "B: 20, 40, 20, 40",
+        "C: 20, 20, 20, 40",
+        "D: NaN, NaN, 20, 40"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#64-whats-the-output"
+    },
+    {
+      "id": 65,
+      "questionTitle": "65. What's the output?",
+      "questionContent": "[1, 2, 3, 4].reduce((x, y) => console.log(x, y));",
+      "questionOptions": [
+        "A: 1 2 and 3 3 and 6 4",
+        "B: 1 2 and 2 3 and 3 4",
+        "C: 1 undefined and 2 undefined and 3 undefined and 4 undefined",
+        "D: 1 2 and undefined 3 and undefined 4"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#65-whats-the-output"
+    },
+    {
+      "id": 66,
+      "questionTitle": "66. With which constructor can we successfully extend the Dog class?",
+      "questionContent": "class Dog {\n  constructor(name) {\n    this.name = name;\n  }\n};\n\nclass Labrador extends Dog {\n  // 1\n  constructor(name, size) {\n    this.size = size;\n  }\n  // 2\n  constructor(name, size) {\n    super(name);\n    this.size = size;\n  }\n  // 3\n  constructor(size) {\n    super(name);\n    this.size = size;\n  }\n  // 4\n  constructor(name, size) {\n    this.name = name;\n    this.size = size;\n  }\n\n};",
+      "questionOptions": [
+        "A: 1",
+        "B: 2",
+        "C: 3",
+        "D: 4"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#66-with-which-constructor-can-we-successfully-extend-the-dog-class"
+    },
+    {
+      "id": 67,
+      "questionTitle": "67. What's the output?",
+      "questionContent": "// index.js\nconsole.log('running index.js');\nimport { sum } from './sum.js';\nconsole.log(sum(1, 2));\n\n// sum.js\nconsole.log('running sum.js');\nexport const sum = (a, b) => a + b;",
+      "questionOptions": [
+        "A: running index.js, running sum.js, 3",
+        "B: running sum.js, running index.js, 3",
+        "C: running sum.js, 3, running index.js",
+        "D: running index.js, undefined, running sum.js"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#67-whats-the-output"
+    },
+    {
+      "id": 68,
+      "questionTitle": "68. What's the output?",
+      "questionContent": "console.log(Number(2) === Number(2));\nconsole.log(Boolean(false) === Boolean(false));\nconsole.log(Symbol('foo') === Symbol('foo'));",
+      "questionOptions": [
+        "A: true, true, false",
+        "B: false, true, false",
+        "C: true, false, true",
+        "D: true, true, true"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#68-whats-the-output"
+    },
+    {
+      "id": 69,
+      "questionTitle": "69. What's the output?",
+      "questionContent": "const name = 'Lydia Hallie';\nconsole.log(name.padStart(13));\nconsole.log(name.padStart(2));",
+      "questionOptions": [
+        "A: \"Lydia Hallie\", \"Lydia Hallie\"",
+        "B: \" Lydia Hallie\", \" Lydia Hallie\" (\"[13x whitespace]Lydia Hallie\", \"[2x whitespace]Lydia Hallie\")",
+        "C: \" Lydia Hallie\", \"Lydia Hallie\" (\"[1x whitespace]Lydia Hallie\", \"Lydia Hallie\")",
+        "D: \"Lydia Hallie\", \"Lyd\","
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#69-whats-the-output"
+    },
+    {
+      "id": 70,
+      "questionTitle": "70. What's the output?",
+      "questionContent": "console.log('🥑' + '💻');",
+      "questionOptions": [
+        "A: \"🥑💻\"",
+        "B: 257548",
+        "C: A string containing their code points",
+        "D: Error"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#70-whats-the-output"
+    },
+    {
+      "id": 71,
+      "questionTitle": "71. How can we log the values that are commented out after the console.log statement?",
+      "questionContent": "function* startGame() {\n  const answer = yield 'Do you love JavaScript?';\n  if (answer !== 'Yes') {\n    return \"Oh wow... Guess we're done here\";\n  }\n  return 'JavaScript loves you back ❤️';\n}\n\nconst game = startGame();\nconsole.log(/* 1 */); // Do you love JavaScript?\nconsole.log(/* 2 */); // JavaScript loves you back ❤️",
+      "questionOptions": [
+        "A: game.next(\"Yes\").value and game.next().value",
+        "B: game.next.value(\"Yes\") and game.next.value()",
+        "C: game.next().value and game.next(\"Yes\").value",
+        "D: game.next.value() and game.next.value(\"Yes\")"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#71-how-can-we-log-the-values-that-are-commented-out-after-the-consolelog-statement"
+    },
+    {
+      "id": 72,
+      "questionTitle": "72. What's the output?",
+      "questionContent": "console.log(String.raw`Hello\\nworld`);",
+      "questionOptions": [
+        "A: Hello world!",
+        "B: Hello      world",
+        "C: Hello\\nworld",
+        "D: Hello\\n       world"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#72-whats-the-output"
+    },
+    {
+      "id": 73,
+      "questionTitle": "73. What's the output?",
+      "questionContent": "async function getData() {\n  return await Promise.resolve('I made it!');\n}\n\nconst data = getData();\nconsole.log(data);",
+      "questionOptions": [
+        "A: \"I made it!\"",
+        "B: Promise {<resolved>: \"I made it!\"}",
+        "C: Promise {<pending>}",
+        "D: undefined"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#73-whats-the-output"
+    },
+    {
+      "id": 74,
+      "questionTitle": "74. What's the output?",
+      "questionContent": "function addToList(item, list) {\n  return list.push(item);\n}\n\nconst result = addToList('apple', ['banana']);\nconsole.log(result);",
+      "questionOptions": [
+        "A: ['apple', 'banana']",
+        "B: 2",
+        "C: true",
+        "D: undefined"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#74-whats-the-output"
+    },
+    {
+      "id": 75,
+      "questionTitle": "75. What's the output?",
+      "questionContent": "const box = { x: 10, y: 20 };\n\nObject.freeze(box);\n\nconst shape = box;\nshape.x = 100;\n\nconsole.log(shape);",
+      "questionOptions": [
+        "A: { x: 100, y: 20 }",
+        "B: { x: 10, y: 20 }",
+        "C: { x: 100 }",
+        "D: ReferenceError"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#75-whats-the-output"
+    },
+    {
+      "id": 76,
+      "questionTitle": "76. What's the output?",
+      "questionContent": "const { firstName: myName } = { firstName: 'Lydia' };\n\nconsole.log(firstName);",
+      "questionOptions": [
+        "A: \"Lydia\"",
+        "B: \"myName\"",
+        "C: undefined",
+        "D: ReferenceError"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#76-whats-the-output"
+    },
+    {
+      "id": 77,
+      "questionTitle": "77. Is this a pure function?",
+      "questionContent": "function sum(a, b) {\n  return a + b;\n}",
+      "questionOptions": [
+        "A: Yes",
+        "B: No"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#77-is-this-a-pure-function"
+    },
+    {
+      "id": 78,
+      "questionTitle": "78. What is the output?",
+      "questionContent": "const add = () => {\n  const cache = {};\n  return num => {\n    if (num in cache) {\n      return `From cache! ${cache[num]}`;\n    } else {\n      const result = num + 10;\n      cache[num] = result;\n      return `Calculated! ${result}`;\n    }\n  };\n};\n\nconst addFunction = add();\nconsole.log(addFunction(10));\nconsole.log(addFunction(10));\nconsole.log(addFunction(5 * 2));",
+      "questionOptions": [
+        "A: Calculated! 20 Calculated! 20 Calculated! 20",
+        "B: Calculated! 20 From cache! 20 Calculated! 20",
+        "C: Calculated! 20 From cache! 20 From cache! 20",
+        "D: Calculated! 20 From cache! 20 Error"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#78-what-is-the-output"
+    },
+    {
+      "id": 79,
+      "questionTitle": "79. What is the output?",
+      "questionContent": "const myLifeSummedUp = ['☕', '💻', '🍷', '🍫'];\n\nfor (let item in myLifeSummedUp) {\n  console.log(item);\n}\n\nfor (let item of myLifeSummedUp) {\n  console.log(item);\n}",
+      "questionOptions": [
+        "A: 0 1 2 3 and \"☕\" \"💻\" \"🍷\" \"🍫\"",
+        "B: \"☕\" \"💻\" \"🍷\" \"🍫\" and \"☕\" \"💻\" \"🍷\" \"🍫\"",
+        "C: \"☕\" \"💻\" \"🍷\" \"🍫\" and 0 1 2 3",
+        "D: 0 1 2 3 and {0: \"☕\", 1: \"💻\", 2: \"🍷\", 3: \"🍫\"}"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#79-what-is-the-output"
+    },
+    {
+      "id": 80,
+      "questionTitle": "80. What is the output?",
+      "questionContent": "const list = [1 + 2, 1 * 2, 1 / 2];\nconsole.log(list);",
+      "questionOptions": [
+        "A: [\"1 + 2\", \"1 * 2\", \"1 / 2\"]",
+        "B: [\"12\", 2, 0.5]",
+        "C: [3, 2, 0.5]",
+        "D: [1, 1, 1]"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#80-what-is-the-output"
+    },
+    {
+      "id": 81,
+      "questionTitle": "81. What is the output?",
+      "questionContent": "function sayHi(name) {\n  return `Hi there, ${name}`;\n}\n\nconsole.log(sayHi());",
+      "questionOptions": [
+        "A: Hi there,",
+        "B: Hi there, undefined",
+        "C: Hi there, null",
+        "D: ReferenceError"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#81-what-is-the-output"
+    },
+    {
+      "id": 82,
+      "questionTitle": "82. What is the output?",
+      "questionContent": "var status = '😎';\n\nsetTimeout(() => {\n  const status = '😍';\n\n  const data = {\n    status: '🥑',\n    getStatus() {\n      return this.status;\n    },\n  };\n\n  console.log(data.getStatus());\n  console.log(data.getStatus.call(this));\n}, 0);",
+      "questionOptions": [
+        "A: \"🥑\" and \"😍\"",
+        "B: \"🥑\" and \"😎\"",
+        "C: \"😍\" and \"😎\"",
+        "D: \"😎\" and \"😎\""
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#82-what-is-the-output"
+    },
+    {
+      "id": 83,
+      "questionTitle": "83. What is the output?",
+      "questionContent": "const person = {\n  name: 'Lydia',\n  age: 21,\n};\n\nlet city = person.city;\ncity = 'Amsterdam';\n\nconsole.log(person);",
+      "questionOptions": [
+        "A: { name: \"Lydia\", age: 21 }",
+        "B: { name: \"Lydia\", age: 21, city: \"Amsterdam\" }",
+        "C: { name: \"Lydia\", age: 21, city: undefined }",
+        "D: \"Amsterdam\""
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#83-what-is-the-output"
+    },
+    {
+      "id": 84,
+      "questionTitle": "84. What is the output?",
+      "questionContent": "function checkAge(age) {\n  if (age < 18) {\n    const message = \"Sorry, you're too young.\";\n  } else {\n    const message = \"Yay! You're old enough!\";\n  }\n\n  return message;\n}\n\nconsole.log(checkAge(21));",
+      "questionOptions": [
+        "A: \"Sorry, you're too young.\"",
+        "B: \"Yay! You're old enough!\"",
+        "C: ReferenceError",
+        "D: undefined"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#84-what-is-the-output"
+    },
+    {
+      "id": 85,
+      "questionTitle": "85. What kind of information would get logged?",
+      "questionContent": "fetch('https://www.website.com/api/user/1')\n  .then(res => res.json())\n  .then(res => console.log(res));",
+      "questionOptions": [
+        "A: The result of the fetch method.",
+        "B: The result of the second invocation of the fetch method.",
+        "C: The result of the callback in the previous .then().",
+        "D: It would always be undefined."
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#85-what-kind-of-information-would-get-logged"
+    },
+    {
+      "id": 86,
+      "questionTitle": "86. Which option is a way to set hasName equal to true, provided you cannot pass true as an argument?",
+      "questionContent": "function getName(name) {\n  const hasName = //\n}",
+      "questionOptions": [
+        "A: !!name",
+        "B: name",
+        "C: new Boolean(name)",
+        "D: name.length"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#86-which-option-is-a-way-to-set-hasname-equal-to-true-provided-you-cannot-pass-true-as-an-argument"
+    },
+    {
+      "id": 87,
+      "questionTitle": "87. What's the output?",
+      "questionContent": "console.log('I want pizza'[0]);",
+      "questionOptions": [
+        "A: \"\"\"",
+        "B: \"I\"",
+        "C: SyntaxError",
+        "D: undefined"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#87-whats-the-output"
+    },
+    {
+      "id": 88,
+      "questionTitle": "88. What's the output?",
+      "questionContent": "function sum(num1, num2 = num1) {\n  console.log(num1 + num2);\n}\n\nsum(10);",
+      "questionOptions": [
+        "A: NaN",
+        "B: 20",
+        "C: ReferenceError",
+        "D: undefined"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#88-whats-the-output"
+    },
+    {
+      "id": 89,
+      "questionTitle": "89. What's the output?",
+      "questionContent": "// module.js\nexport default () => 'Hello world';\nexport const name = 'Lydia';\n\n// index.js\nimport * as data from './module';\n\nconsole.log(data);",
+      "questionOptions": [
+        "A: { default: function default(), name: \"Lydia\" }",
+        "B: { default: function default() }",
+        "C: { default: \"Hello world\", name: \"Lydia\" }",
+        "D: Global object of module.js"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#89-whats-the-output"
+    },
+    {
+      "id": 90,
+      "questionTitle": "90. What's the output?",
+      "questionContent": "class Person {\n  constructor(name) {\n    this.name = name;\n  }\n}\n\nconst member = new Person('John');\nconsole.log(typeof member);",
+      "questionOptions": [
+        "A: \"class\"",
+        "B: \"function\"",
+        "C: \"object\"",
+        "D: \"string\""
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#90-whats-the-output"
+    },
+    {
+      "id": 91,
+      "questionTitle": "91. What's the output?",
+      "questionContent": "let newList = [1, 2, 3].push(4);\n\nconsole.log(newList.push(5));",
+      "questionOptions": [
+        "A: [1, 2, 3, 4, 5]",
+        "B: [1, 2, 3, 5]",
+        "C: [1, 2, 3, 4]",
+        "D: Error"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#91-whats-the-output"
+    },
+    {
+      "id": 92,
+      "questionTitle": "92. What's the output?",
+      "questionContent": "function giveLydiaPizza() {\n  return 'Here is pizza!';\n}\n\nconst giveLydiaChocolate = () =>\n  \"Here's chocolate... now go hit the gym already.\";\n\nconsole.log(giveLydiaPizza.prototype);\nconsole.log(giveLydiaChocolate.prototype);",
+      "questionOptions": [
+        "A: { constructor: ...} { constructor: ...}",
+        "B: {} { constructor: ...}",
+        "C: { constructor: ...} {}",
+        "D: { constructor: ...} undefined"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#92-whats-the-output"
+    },
+    {
+      "id": 93,
+      "questionTitle": "93. What's the output?",
+      "questionContent": "const person = {\n  name: 'Lydia',\n  age: 21,\n};\n\nfor (const [x, y] of Object.entries(person)) {\n  console.log(x, y);\n}",
+      "questionOptions": [
+        "A: name Lydia and age 21",
+        "B: [\"name\", \"Lydia\"] and [\"age\", 21]",
+        "C: [\"name\", \"age\"] and undefined",
+        "D: Error"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#93-whats-the-output"
+    },
+    {
+      "id": 94,
+      "questionTitle": "94. What's the output?",
+      "questionContent": "function getItems(fruitList, ...args, favoriteFruit) {\n  return [...fruitList, ...args, favoriteFruit]\n}\n\ngetItems([\"banana\", \"apple\"], \"pear\", \"orange\")",
+      "questionOptions": [
+        "A: [\"banana\", \"apple\", \"pear\", \"orange\"]",
+        "B: [[\"banana\", \"apple\"], \"pear\", \"orange\"]",
+        "C: [\"banana\", \"apple\", [\"pear\"], \"orange\"]",
+        "D: SyntaxError"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#94-whats-the-output"
+    },
+    {
+      "id": 95,
+      "questionTitle": "95. What's the output?",
+      "questionContent": "function nums(a, b) {\n  if (a > b) console.log('a is bigger');\n  else console.log('b is bigger');\n  return\n  a + b;\n}\n\nconsole.log(nums(4, 2));\nconsole.log(nums(1, 2));",
+      "questionOptions": [
+        "A: a is bigger, 6 and b is bigger, 3",
+        "B: a is bigger, undefined and b is bigger, undefined",
+        "C: undefined and undefined",
+        "D: SyntaxError"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#95-whats-the-output"
+    },
+    {
+      "id": 96,
+      "questionTitle": "96. What's the output?",
+      "questionContent": "class Person {\n  constructor() {\n    this.name = 'Lydia';\n  }\n}\n\nPerson = class AnotherPerson {\n  constructor() {\n    this.name = 'Sarah';\n  }\n};\n\nconst member = new Person();\nconsole.log(member.name);",
+      "questionOptions": [
+        "A: \"Lydia\"",
+        "B: \"Sarah\"",
+        "C: Error: cannot redeclare Person",
+        "D: SyntaxError"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#96-whats-the-output"
+    },
+    {
+      "id": 97,
+      "questionTitle": "97. What's the output?",
+      "questionContent": "const info = {\n  [Symbol('a')]: 'b',\n};\n\nconsole.log(info);\nconsole.log(Object.keys(info));",
+      "questionOptions": [
+        "A: {Symbol('a'): 'b'} and [\"{Symbol('a')\"]",
+        "B: {} and []",
+        "C: { a: \"b\" } and [\"a\"]",
+        "D: {Symbol('a'): 'b'} and []"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#97-whats-the-output"
+    },
+    {
+      "id": 98,
+      "questionTitle": "98. What's the output?",
+      "questionContent": "const getList = ([x, ...y]) => [x, y]\nconst getUser = user => { name: user.name, age: user.age }\n\nconst list = [1, 2, 3, 4]\nconst user = { name: \"Lydia\", age: 21 }\n\nconsole.log(getList(list))\nconsole.log(getUser(user))",
+      "questionOptions": [
+        "A: [1, [2, 3, 4]] and SyntaxError",
+        "B: [1, [2, 3, 4]] and { name: \"Lydia\", age: 21 }",
+        "C: [1, 2, 3, 4] and { name: \"Lydia\", age: 21 }",
+        "D: Error and { name: \"Lydia\", age: 21 }"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#98-whats-the-output"
+    },
+    {
+      "id": 99,
+      "questionTitle": "99. What's the output?",
+      "questionContent": "const name = 'Lydia';\n\nconsole.log(name());",
+      "questionOptions": [
+        "A: SyntaxError",
+        "B: ReferenceError",
+        "C: TypeError",
+        "D: undefined"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#99-whats-the-output"
+    },
+    {
+      "id": 100,
+      "questionTitle": "100. What's the value of output?",
+      "questionContent": "// 🎉✨ This is my 100th question! ✨🎉\n\nconst output = `${[] && 'Im'}possible!\nYou should${'' && `n't`} see a therapist after so much JavaScript lol`;",
+      "questionOptions": [
+        "A: possible! You should see a therapist after so much JavaScript lol",
+        "B: Impossible! You should see a therapist after so much JavaScript lol",
+        "C: possible! You shouldn't see a therapist after so much JavaScript lol",
+        "D: Impossible! You shouldn't see a therapist after so much JavaScript lol"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#100-whats-the-value-of-output"
+    },
+    {
+      "id": 101,
+      "questionTitle": "101. What's the value of output?",
+      "questionContent": "const one = false || {} || null;\nconst two = null || false || '';\nconst three = [] || 0 || true;\n\nconsole.log(one, two, three);",
+      "questionOptions": [
+        "A: false null []",
+        "B: null \"\" true",
+        "C: {} \"\" []",
+        "D: null null true"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#101-whats-the-value-of-output"
+    },
+    {
+      "id": 102,
+      "questionTitle": "102. What's the value of output?",
+      "questionContent": "const myPromise = () => Promise.resolve('I have resolved!');\n\nfunction firstFunction() {\n  myPromise().then(res => console.log(res));\n  console.log('second');\n}\n\nasync function secondFunction() {\n  console.log(await myPromise());\n  console.log('second');\n}\n\nfirstFunction();\nsecondFunction();",
+      "questionOptions": [
+        "A: I have resolved!, second and I have resolved!, second",
+        "B: second, I have resolved! and second, I have resolved!",
+        "C: I have resolved!, second and second, I have resolved!",
+        "D: second, I have resolved! and I have resolved!, second"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#102-whats-the-value-of-output"
+    },
+    {
+      "id": 103,
+      "questionTitle": "103. What's the value of output?",
+      "questionContent": "const set = new Set();\n\nset.add(1);\nset.add('Lydia');\nset.add({ name: 'Lydia' });\n\nfor (let item of set) {\n  console.log(item + 2);\n}",
+      "questionOptions": [
+        "A: 3, NaN, NaN",
+        "B: 3, 7, NaN",
+        "C: 3, Lydia2, [object Object]2",
+        "D: \"12\", Lydia2, [object Object]2"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#103-whats-the-value-of-output"
+    },
+    {
+      "id": 104,
+      "questionTitle": "104. What's its value?",
+      "questionContent": "Promise.resolve(5);",
+      "questionOptions": [
+        "A: 5",
+        "B: Promise {<pending>: 5}",
+        "C: Promise {<fulfilled>: 5}",
+        "D: Error"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#104-whats-its-value"
+    },
+    {
+      "id": 105,
+      "questionTitle": "105. What's its value?",
+      "questionContent": "function compareMembers(person1, person2 = person) {\n  if (person1 !== person2) {\n    console.log('Not the same!');\n  } else {\n    console.log('They are the same!');\n  }\n}\n\nconst person = { name: 'Lydia' };\n\ncompareMembers(person);",
+      "questionOptions": [
+        "A: Not the same!",
+        "B: They are the same!",
+        "C: ReferenceError",
+        "D: SyntaxError"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#105-whats-its-value"
+    },
+    {
+      "id": 106,
+      "questionTitle": "106. What's its value?",
+      "questionContent": "const colorConfig = {\n  red: true,\n  blue: false,\n  green: true,\n  black: true,\n  yellow: false,\n};\n\nconst colors = ['pink', 'red', 'blue'];\n\nconsole.log(colorConfig.colors[1]);",
+      "questionOptions": [
+        "A: true",
+        "B: false",
+        "C: undefined",
+        "D: TypeError"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#106-whats-its-value"
+    },
+    {
+      "id": 107,
+      "questionTitle": "107. What's its value?",
+      "questionContent": "console.log('❤️' === '❤️');",
+      "questionOptions": [
+        "A: true",
+        "B: false"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#107-whats-its-value"
+    },
+    {
+      "id": 108,
+      "questionTitle": "108. Which of these methods modifies the original array?",
+      "questionContent": "const emojis = ['✨', '🥑', '😍'];\n\nemojis.map(x => x + '✨');\nemojis.filter(x => x !== '🥑');\nemojis.find(x => x !== '🥑');\nemojis.reduce((acc, cur) => acc + '✨');\nemojis.slice(1, 2, '✨');\nemojis.splice(1, 2, '✨');",
+      "questionOptions": [
+        "A: All of them",
+        "B: map reduce slice splice",
+        "C: map slice splice",
+        "D: splice"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#108-which-of-these-methods-modifies-the-original-array"
+    },
+    {
+      "id": 109,
+      "questionTitle": "109. What's the output?",
+      "questionContent": "const food = ['🍕', '🍫', '🥑', '🍔'];\nconst info = { favoriteFood: food[0] };\n\ninfo.favoriteFood = '🍝';\n\nconsole.log(food);",
+      "questionOptions": [
+        "A: ['🍕', '🍫', '🥑', '🍔']",
+        "B: ['🍝', '🍫', '🥑', '🍔']",
+        "C: ['🍝', '🍕', '🍫', '🥑', '🍔']",
+        "D: ReferenceError"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#109-whats-the-output"
+    },
+    {
+      "id": 110,
+      "questionTitle": "110. What does this method do?",
+      "questionContent": "JSON.parse();",
+      "questionOptions": [
+        "A: Parses JSON to a JavaScript value",
+        "B: Parses a JavaScript object to JSON",
+        "C: Parses any JavaScript value to JSON",
+        "D: Parses JSON to a JavaScript object only"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#110-what-does-this-method-do"
+    },
+    {
+      "id": 111,
+      "questionTitle": "111. What's the output?",
+      "questionContent": "let name = 'Lydia';\n\nfunction getName() {\n  console.log(name);\n  let name = 'Sarah';\n}\n\ngetName();",
+      "questionOptions": [
+        "A: Lydia",
+        "B: Sarah",
+        "C: undefined",
+        "D: ReferenceError"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#111-whats-the-output"
+    },
+    {
+      "id": 112,
+      "questionTitle": "112. What's the output?",
+      "questionContent": "function* generatorOne() {\n  yield ['a', 'b', 'c'];\n}\n\nfunction* generatorTwo() {\n  yield* ['a', 'b', 'c'];\n}\n\nconst one = generatorOne();\nconst two = generatorTwo();\n\nconsole.log(one.next().value);\nconsole.log(two.next().value);",
+      "questionOptions": [
+        "A: a and a",
+        "B: a and undefined",
+        "C: ['a', 'b', 'c'] and a",
+        "D: a and ['a', 'b', 'c']"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#112-whats-the-output"
+    },
+    {
+      "id": 113,
+      "questionTitle": "113. What's the output?",
+      "questionContent": "console.log(`${(x => x)('I love')} to program`);",
+      "questionOptions": [
+        "A: I love to program",
+        "B: undefined to program",
+        "C: ${(x => x)('I love') to program",
+        "D: TypeError"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#113-whats-the-output"
+    },
+    {
+      "id": 114,
+      "questionTitle": "114. What will happen?",
+      "questionContent": "let config = {\n  alert: setInterval(() => {\n    console.log('Alert!');\n  }, 1000),\n};\n\nconfig = null;",
+      "questionOptions": [
+        "A: The setInterval callback won't be invoked",
+        "B: The setInterval callback gets invoked once",
+        "C: The setInterval callback will still be called every second",
+        "D: We never invoked config.alert(), config is null"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#114-what-will-happen"
+    },
+    {
+      "id": 115,
+      "questionTitle": "115. Which method(s) will return the value 'Hello world!'?",
+      "questionContent": "const myMap = new Map();\nconst myFunc = () => 'greeting';\n\nmyMap.set(myFunc, 'Hello world!');\n\n//1\nmyMap.get('greeting');\n//2\nmyMap.get(myFunc);\n//3\nmyMap.get(() => 'greeting');",
+      "questionOptions": [
+        "A: 1",
+        "B: 2",
+        "C: 2 and 3",
+        "D: All of them"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#115-which-methods-will-return-the-value-hello-world"
+    },
+    {
+      "id": 116,
+      "questionTitle": "116. What's the output?",
+      "questionContent": "const person = {\n  name: 'Lydia',\n  age: 21,\n};\n\nconst changeAge = (x = { ...person }) => (x.age += 1);\nconst changeAgeAndName = (x = { ...person }) => {\n  x.age += 1;\n  x.name = 'Sarah';\n};\n\nchangeAge(person);\nchangeAgeAndName();\n\nconsole.log(person);",
+      "questionOptions": [
+        "A: {name: \"Sarah\", age: 22}",
+        "B: {name: \"Sarah\", age: 23}",
+        "C: {name: \"Lydia\", age: 22}",
+        "D: {name: \"Lydia\", age: 23}"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#116-whats-the-output"
+    },
+    {
+      "id": 117,
+      "questionTitle": "117. Which of the following options will return 6?",
+      "questionContent": "function sumValues(x, y, z) {\n  return x + y + z;\n}",
+      "questionOptions": [
+        "A: sumValues([...1, 2, 3])",
+        "B: sumValues([...[1, 2, 3]])",
+        "C: sumValues(...[1, 2, 3])",
+        "D: sumValues([1, 2, 3])"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#117-which-of-the-following-options-will-return-6"
+    },
+    {
+      "id": 118,
+      "questionTitle": "118. What's the output?",
+      "questionContent": "let num = 1;\nconst list = ['🥳', '🤠', '🥰', '🤪'];\n\nconsole.log(list[(num += 1)]);",
+      "questionOptions": [
+        "A: 🤠",
+        "B: 🥰",
+        "C: SyntaxError",
+        "D: ReferenceError"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#118-whats-the-output"
+    },
+    {
+      "id": 119,
+      "questionTitle": "119. What's the output?",
+      "questionContent": "const person = {\n  firstName: 'Lydia',\n  lastName: 'Hallie',\n  pet: {\n    name: 'Mara',\n    breed: 'Dutch Tulip Hound',\n  },\n  getFullName() {\n    return `${this.firstName} ${this.lastName}`;\n  },\n};\n\nconsole.log(person.pet?.name);\nconsole.log(person.pet?.family?.name);\nconsole.log(person.getFullName?.());\nconsole.log(member.getLastName?.());",
+      "questionOptions": [
+        "A: undefined undefined undefined undefined",
+        "B: Mara undefined Lydia Hallie ReferenceError",
+        "C: Mara null Lydia Hallie null",
+        "D: null ReferenceError null ReferenceError"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#119-whats-the-output"
+    },
+    {
+      "id": 120,
+      "questionTitle": "120. What's the output?",
+      "questionContent": "const groceries = ['banana', 'apple', 'peanuts'];\n\nif (groceries.indexOf('banana')) {\n  console.log('We have to buy bananas!');\n} else {\n  console.log(`We don't have to buy bananas!`);\n}",
+      "questionOptions": [
+        "A: We have to buy bananas!",
+        "B: We don't have to buy bananas",
+        "C: undefined",
+        "D: 1"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#120-whats-the-output"
+    },
+    {
+      "id": 121,
+      "questionTitle": "121. What's the output?",
+      "questionContent": "const config = {\n  languages: [],\n  set language(lang) {\n    return this.languages.push(lang);\n  },\n};\n\nconsole.log(config.language);",
+      "questionOptions": [
+        "A: function language(lang) { this.languages.push(lang }",
+        "B: 0",
+        "C: []",
+        "D: undefined"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#121-whats-the-output"
+    },
+    {
+      "id": 122,
+      "questionTitle": "122. What's the output?",
+      "questionContent": "const name = 'Lydia Hallie';\n\nconsole.log(!typeof name === 'object');\nconsole.log(!typeof name === 'string');",
+      "questionOptions": [
+        "A: false true",
+        "B: true false",
+        "C: false false",
+        "D: true true"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#122-whats-the-output"
+    },
+    {
+      "id": 123,
+      "questionTitle": "123. What's the output?",
+      "questionContent": "const add = x => y => z => {\n  console.log(x, y, z);\n  return x + y + z;\n};\n\nadd(4)(5)(6);",
+      "questionOptions": [
+        "A: 4 5 6",
+        "B: 6 5 4",
+        "C: 4 function function",
+        "D: undefined undefined 6"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#123-whats-the-output"
+    },
+    {
+      "id": 124,
+      "questionTitle": "124. What's the output?",
+      "questionContent": "async function* range(start, end) {\n  for (let i = start; i <= end; i++) {\n    yield Promise.resolve(i);\n  }\n}\n\n(async () => {\n  const gen = range(1, 3);\n  for await (const item of gen) {\n    console.log(item);\n  }\n})();",
+      "questionOptions": [
+        "A: Promise {1} Promise {2} Promise {3}",
+        "B: Promise {<pending>} Promise {<pending>} Promise {<pending>}",
+        "C: 1 2 3",
+        "D: undefined undefined undefined"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#124-whats-the-output"
+    },
+    {
+      "id": 125,
+      "questionTitle": "125. What's the output?",
+      "questionContent": "const myFunc = ({ x, y, z }) => {\n  console.log(x, y, z);\n};\n\nmyFunc(1, 2, 3);",
+      "questionOptions": [
+        "A: 1 2 3",
+        "B: {1: 1} {2: 2} {3: 3}",
+        "C: { 1: undefined } undefined undefined",
+        "D: undefined undefined undefined"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#125-whats-the-output"
+    },
+    {
+      "id": 126,
+      "questionTitle": "126. What's the output?",
+      "questionContent": "function getFine(speed, amount) {\n  const formattedSpeed = new Intl.NumberFormat('en-US', {\n    style: 'unit',\n    unit: 'mile-per-hour'\n  }).format(speed);\n\n  const formattedAmount = new Intl.NumberFormat('en-US', {\n    style: 'currency',\n    currency: 'USD'\n  }).format(amount);\n\n  return `The driver drove ${formattedSpeed} and has to pay ${formattedAmount}`;\n}\n\nconsole.log(getFine(130, 300))",
+      "questionOptions": [
+        "A: The driver drove 130 and has to pay 300",
+        "B: The driver drove 130 mph and has to pay $300.00",
+        "C: The driver drove undefined and has to pay undefined",
+        "D: The driver drove 130.00 and has to pay 300.00"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#126-whats-the-output"
+    },
+    {
+      "id": 127,
+      "questionTitle": "127. What's the output?",
+      "questionContent": "const spookyItems = ['👻', '🎃', '🕸'];\n({ item: spookyItems[3] } = { item: '💀' });\n\nconsole.log(spookyItems);",
+      "questionOptions": [
+        "A: [\"👻\", \"🎃\", \"🕸\"]",
+        "B: [\"👻\", \"🎃\", \"🕸\", \"💀\"]",
+        "C: [\"👻\", \"🎃\", \"🕸\", { item: \"💀\" }]",
+        "D: [\"👻\", \"🎃\", \"🕸\", \"[object Object]\"]"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#127-whats-the-output"
+    },
+    {
+      "id": 128,
+      "questionTitle": "128. What's the output?",
+      "questionContent": "const name = 'Lydia Hallie';\nconst age = 21;\n\nconsole.log(Number.isNaN(name));\nconsole.log(Number.isNaN(age));\n\nconsole.log(isNaN(name));\nconsole.log(isNaN(age));",
+      "questionOptions": [
+        "A: true false true false",
+        "B: true false false false",
+        "C: false false true false",
+        "D: false true false true"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#128-whats-the-output"
+    },
+    {
+      "id": 129,
+      "questionTitle": "129. What's the output?",
+      "questionContent": "const randomValue = 21;\n\nfunction getInfo() {\n  console.log(typeof randomValue);\n  const randomValue = 'Lydia Hallie';\n}\n\ngetInfo();",
+      "questionOptions": [
+        "A: \"number\"",
+        "B: \"string\"",
+        "C: undefined",
+        "D: ReferenceError"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#129-whats-the-output"
+    },
+    {
+      "id": 130,
+      "questionTitle": "130. What's the output?",
+      "questionContent": "const myPromise = Promise.resolve('Woah some cool data');\n\n(async () => {\n  try {\n    console.log(await myPromise);\n  } catch {\n    throw new Error(`Oops didn't work`);\n  } finally {\n    console.log('Oh finally!');\n  }\n})();",
+      "questionOptions": [
+        "A: Woah some cool data",
+        "B: Oh finally!",
+        "C: Woah some cool data Oh finally!",
+        "D: Oops didn't work Oh finally!"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#130-whats-the-output"
+    },
+    {
+      "id": 131,
+      "questionTitle": "131. What's the output?",
+      "questionContent": "const emojis = ['🥑', ['✨', '✨', ['🍕', '🍕']]];\n\nconsole.log(emojis.flat(1));",
+      "questionOptions": [
+        "A: ['🥑', ['✨', '✨', ['🍕', '🍕']]]",
+        "B: ['🥑', '✨', '✨', ['🍕', '🍕']]",
+        "C: ['🥑', ['✨', '✨', '🍕', '🍕']]",
+        "D: ['🥑', '✨', '✨', '🍕', '🍕']"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#131-whats-the-output"
+    },
+    {
+      "id": 132,
+      "questionTitle": "132. What's the output?",
+      "questionContent": "class Counter {\n  constructor() {\n    this.count = 0;\n  }\n\n  increment() {\n    this.count++;\n  }\n}\n\nconst counterOne = new Counter();\ncounterOne.increment();\ncounterOne.increment();\n\nconst counterTwo = counterOne;\ncounterTwo.increment();\n\nconsole.log(counterOne.count);",
+      "questionOptions": [
+        "A: 0",
+        "B: 1",
+        "C: 2",
+        "D: 3"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#132-whats-the-output"
+    },
+    {
+      "id": 133,
+      "questionTitle": "133. What's the output?",
+      "questionContent": "const myPromise = Promise.resolve(Promise.resolve('Promise'));\n\nfunction funcOne() {\n  setTimeout(() => console.log('Timeout 1!'), 0);\n  myPromise.then(res => res).then(res => console.log(`${res} 1!`));\n  console.log('Last line 1!');\n}\n\nasync function funcTwo() {\n  const res = await myPromise;\n  console.log(`${res} 2!`)\n  setTimeout(() => console.log('Timeout 2!'), 0);\n  console.log('Last line 2!');\n}\n\nfuncOne();\nfuncTwo();",
+      "questionOptions": [
+        "A: Promise 1! Last line 1! Promise 2! Last line 2! Timeout 1! Timeout 2!",
+        "B: Last line 1! Timeout 1! Promise 1! Last line 2! Promise2! Timeout 2!",
+        "C: Last line 1! Promise 2! Last line 2! Promise 1! Timeout 1! Timeout 2!",
+        "D: Timeout 1! Promise 1! Last line 1! Promise 2! Timeout 2! Last line 2!"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#133-whats-the-output"
+    },
+    {
+      "id": 134,
+      "questionTitle": "134. How can we invoke sum in sum.js from index.js?",
+      "questionContent": "// sum.js\nexport default function sum(x) {\n  return x + x;\n}\n\n// index.js\nimport * as sum from './sum';",
+      "questionOptions": [
+        "A: sum(4)",
+        "B: sum.sum(4)",
+        "C: sum.default(4)",
+        "D: Default aren't imported with *, only named exports"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#134-how-can-we-invoke-sum-in-sumjs-from-indexjs"
+    },
+    {
+      "id": 135,
+      "questionTitle": "135. What's the output?",
+      "questionContent": "const handler = {\n  set: () => console.log('Added a new property!'),\n  get: () => console.log('Accessed a property!'),\n};\n\nconst person = new Proxy({}, handler);\n\nperson.name = 'Lydia';\nperson.name;",
+      "questionOptions": [
+        "A: Added a new property!",
+        "B: Accessed a property!",
+        "C: Added a new property! Accessed a property!",
+        "D: Nothing gets logged"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#135-whats-the-output"
+    },
+    {
+      "id": 136,
+      "questionTitle": "136. Which of the following will modify the person object?",
+      "questionContent": "const person = { name: 'Lydia Hallie' };\n\nObject.seal(person);",
+      "questionOptions": [
+        "A: person.name = \"Evan Bacon\"",
+        "B: person.age = 21",
+        "C: delete person.name",
+        "D: Object.assign(person, { age: 21 })"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#136-which-of-the-following-will-modify-the-person-object"
+    },
+    {
+      "id": 137,
+      "questionTitle": "137. Which of the following will modify the person object?",
+      "questionContent": "const person = {\n  name: 'Lydia Hallie',\n  address: {\n    street: '100 Main St',\n  },\n};\n\nObject.freeze(person);",
+      "questionOptions": [
+        "A: person.name = \"Evan Bacon\"",
+        "B: delete person.address",
+        "C: person.address.street = \"101 Main St\"",
+        "D: person.pet = { name: \"Mara\" }"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#137-which-of-the-following-will-modify-the-person-object"
+    },
+    {
+      "id": 138,
+      "questionTitle": "138. What's the output?",
+      "questionContent": "const add = x => x + x;\n\nfunction myFunc(num = 2, value = add(num)) {\n  console.log(num, value);\n}\n\nmyFunc();\nmyFunc(3);",
+      "questionOptions": [
+        "A: 2 4 and 3 6",
+        "B: 2 NaN and 3 NaN",
+        "C: 2 Error and 3 6",
+        "D: 2 4 and 3 Error"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#138-whats-the-output"
+    },
+    {
+      "id": 139,
+      "questionTitle": "139. What's the output?",
+      "questionContent": "class Counter {\n  #number = 10\n\n  increment() {\n    this.#number++\n  }\n\n  getNum() {\n    return this.#number\n  }\n}\n\nconst counter = new Counter()\ncounter.increment()\n\nconsole.log(counter.#number)",
+      "questionOptions": [
+        "A: 10",
+        "B: 11",
+        "C: undefined",
+        "D: SyntaxError"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#139-whats-the-output"
+    },
+    {
+      "id": 140,
+      "questionTitle": "140. What's missing?",
+      "questionContent": "const teams = [\n  { name: 'Team 1', members: ['Paul', 'Lisa'] },\n  { name: 'Team 2', members: ['Laura', 'Tim'] },\n];\n\nfunction* getMembers(members) {\n  for (let i = 0; i < members.length; i++) {\n    yield members[i];\n  }\n}\n\nfunction* getTeams(teams) {\n  for (let i = 0; i < teams.length; i++) {\n    // ✨ SOMETHING IS MISSING HERE ✨\n  }\n}\n\nconst obj = getTeams(teams);\nobj.next(); // { value: \"Paul\", done: false }\nobj.next(); // { value: \"Lisa\", done: false }",
+      "questionOptions": [
+        "A: yield getMembers(teams[i].members)",
+        "B: yield* getMembers(teams[i].members)",
+        "C: return getMembers(teams[i].members)",
+        "D: return yield getMembers(teams[i].members)"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#140-whats-missing"
+    },
+    {
+      "id": 141,
+      "questionTitle": "141. What's the output?",
+      "questionContent": "const person = {\n  name: 'Lydia Hallie',\n  hobbies: ['coding'],\n};\n\nfunction addHobby(hobby, hobbies = person.hobbies) {\n  hobbies.push(hobby);\n  return hobbies;\n}\n\naddHobby('running', []);\naddHobby('dancing');\naddHobby('baking', person.hobbies);\n\nconsole.log(person.hobbies);",
+      "questionOptions": [
+        "A: [\"coding\"]",
+        "B: [\"coding\", \"dancing\"]",
+        "C: [\"coding\", \"dancing\", \"baking\"]",
+        "D: [\"coding\", \"running\", \"dancing\", \"baking\"]"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#141-whats-the-output"
+    },
+    {
+      "id": 142,
+      "questionTitle": "142. What's the output?",
+      "questionContent": "class Bird {\n  constructor() {\n    console.log(\"I'm a bird. 🦢\");\n  }\n}\n\nclass Flamingo extends Bird {\n  constructor() {\n    console.log(\"I'm pink. 🌸\");\n    super();\n  }\n}\n\nconst pet = new Flamingo();",
+      "questionOptions": [
+        "A: I'm pink. 🌸",
+        "B: I'm pink. 🌸 I'm a bird. 🦢",
+        "C: I'm a bird. 🦢 I'm pink. 🌸",
+        "D: Nothing, we didn't call any method"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#142-whats-the-output"
+    },
+    {
+      "id": 143,
+      "questionTitle": "143. Which of the options result(s) in an error?",
+      "questionContent": "const emojis = ['🎄', '🎅🏼', '🎁', '⭐'];\n\n/* 1 */ emojis.push('🦌');\n/* 2 */ emojis.splice(0, 2);\n/* 3 */ emojis = [...emojis, '🥂'];\n/* 4 */ emojis.length = 0;",
+      "questionOptions": [
+        "A: 1",
+        "B: 1 and 2",
+        "C: 3 and 4",
+        "D: 3"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#143-which-of-the-options-results-in-an-error"
+    },
+    {
+      "id": 144,
+      "questionTitle": "144. What do we need to add to the person object to get [\"Lydia Hallie\", 21] as the output of [...person]?",
+      "questionContent": "const person = {\n  name: \"Lydia Hallie\",\n  age: 21\n}\n\n[...person] // [\"Lydia Hallie\", 21]",
+      "questionOptions": [
+        "A: Nothing, object are iterable by default",
+        "B: *[Symbol.iterator]() { for (let x in this) yield* this[x] }",
+        "C: *[Symbol.iterator]() { yield* Object.values(this) }",
+        "D: *[Symbol.iterator]() { for (let x in this) yield this }"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#144-what-do-we-need-to-add-to-the-person-object-to-get-lydia-hallie-21-as-the-output-of-person"
+    },
+    {
+      "id": 145,
+      "questionTitle": "145. What's the output?",
+      "questionContent": "let count = 0;\nconst nums = [0, 1, 2, 3];\n\nnums.forEach(num => {\n\tif (num) count += 1\n})\n\nconsole.log(count)",
+      "questionOptions": [
+        "A: 1",
+        "B: 2",
+        "C: 3",
+        "D: 4"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#145-whats-the-output"
+    },
+    {
+      "id": 146,
+      "questionTitle": "146. What's the output?",
+      "questionContent": "function getFruit(fruits) {\n\tconsole.log(fruits?.[1]?.[1])\n}\n\ngetFruit([['🍊', '🍌'], ['🍍']])\ngetFruit()\ngetFruit([['🍍'], ['🍊', '🍌']])",
+      "questionOptions": [
+        "A: null, undefined, 🍌",
+        "B: [], null, 🍌",
+        "C: [], [], 🍌",
+        "D: undefined, undefined, 🍌"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#146-whats-the-output"
+    },
+    {
+      "id": 147,
+      "questionTitle": "147. What's the output?",
+      "questionContent": "class Calc {\n\tconstructor() {\n\t\tthis.count = 0 \n\t}\n\n\tincrease() {\n\t\tthis.count ++\n\t}\n}\n\nconst calc = new Calc()\nnew Calc().increase()\n\nconsole.log(calc.count)",
+      "questionOptions": [
+        "A: 0",
+        "B: 1",
+        "C: undefined",
+        "D: ReferenceError"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#147-whats-the-output"
+    },
+    {
+      "id": 148,
+      "questionTitle": "148. What's the output?",
+      "questionContent": "const user = {\n\temail: \"e@mail.com\",\n\tpassword: \"12345\"\n}\n\nconst updateUser = ({ email, password }) => {\n\tif (email) {\n\t\tObject.assign(user, { email })\n\t}\n\n\tif (password) {\n\t\tuser.password = password\n\t}\n\n\treturn user\n}\n\nconst updatedUser = updateUser({ email: \"new@email.com\" })\n\nconsole.log(updatedUser === user)",
+      "questionOptions": [
+        "A: false",
+        "B: true",
+        "C: TypeError",
+        "D: ReferenceError"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#148-whats-the-output"
+    },
+    {
+      "id": 149,
+      "questionTitle": "149. What's the output?",
+      "questionContent": "const fruit = ['🍌', '🍊', '🍎']\n\nfruit.slice(0, 1)\nfruit.splice(0, 1)\nfruit.unshift('🍇')\n\nconsole.log(fruit)",
+      "questionOptions": [
+        "A: ['🍌', '🍊', '🍎']",
+        "B: ['🍊', '🍎']",
+        "C: ['🍇', '🍊', '🍎']",
+        "D: ['🍇', '🍌', '🍊', '🍎']"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#149-whats-the-output"
+    },
+    {
+      "id": 150,
+      "questionTitle": "150. What's the output?",
+      "questionContent": "const animals = {};\nlet dog = { emoji: '🐶' }\nlet cat = { emoji: '🐈' }\n\nanimals[dog] = { ...dog, name: \"Mara\" }\nanimals[cat] = { ...cat, name: \"Sara\" }\n\nconsole.log(animals[dog])",
+      "questionOptions": [
+        "A: { emoji: \"🐶\", name: \"Mara\" }",
+        "B: { emoji: \"🐈\", name: \"Sara\" }",
+        "C: undefined",
+        "D: ReferenceError"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#150-whats-the-output"
+    },
+    {
+      "id": 151,
+      "questionTitle": "151. What's the output?",
+      "questionContent": "const user = {\n\temail: \"my@email.com\",\n\tupdateEmail: email => {\n\t\tthis.email = email\n\t}\n}\n\nuser.updateEmail(\"new@email.com\")\nconsole.log(user.email)",
+      "questionOptions": [
+        "A: my@email.com",
+        "B: new@email.com",
+        "C: undefined",
+        "D: ReferenceError"
+      ],
+      "questionAnswer": "Answer: A",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#151-whats-the-output"
+    },
+    {
+      "id": 152,
+      "questionTitle": "152. What's the output?",
+      "questionContent": "const promise1 = Promise.resolve('First')\nconst promise2 = Promise.resolve('Second')\nconst promise3 = Promise.reject('Third')\nconst promise4 = Promise.resolve('Fourth')\n\nconst runPromises = async () => {\n\tconst res1 = await Promise.all([promise1, promise2])\n\tconst res2  = await Promise.all([promise3, promise4])\n\treturn [res1, res2]\n}\n\nrunPromises()\n\t.then(res => console.log(res))\n\t.catch(err => console.log(err))",
+      "questionOptions": [
+        "A: [['First', 'Second'], ['Fourth']]",
+        "B: [['First', 'Second'], ['Third', 'Fourth']]",
+        "C: [['First', 'Second']]",
+        "D: 'Third'"
+      ],
+      "questionAnswer": "Answer: D",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#152-whats-the-output"
+    },
+    {
+      "id": 153,
+      "questionTitle": "153. What should the value of method be to log { name: \"Lydia\", age: 22 }?",
+      "questionContent": "const keys = [\"name\", \"age\"]\nconst values = [\"Lydia\", 22]\n\nconst method = /* ?? */\nObject[method](keys.map((_, i) => {\n\treturn [keys[i], values[i]]\n})) // { name: \"Lydia\", age: 22 }",
+      "questionOptions": [
+        "A: entries",
+        "B: values",
+        "C: fromEntries",
+        "D: forEach"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#153-what-should-the-value-of-method-be-to-log--name-lydia-age-22-"
+    },
+    {
+      "id": 154,
+      "questionTitle": "154. What's the output?",
+      "questionContent": "const createMember = ({ email, address = {}}) => {\n\tconst validEmail = /.+\\@.+\\..+/.test(email)\n\tif (!validEmail) throw new Error(\"Valid email pls\")\n\n\treturn {\n\t\temail,\n\t\taddress: address ? address : null\n\t}\n}\n\nconst member = createMember({ email: \"my@email.com\" })\nconsole.log(member)",
+      "questionOptions": [
+        "A: { email: \"my@email.com\", address: null }",
+        "B: { email: \"my@email.com\" }",
+        "C: { email: \"my@email.com\", address: {} }",
+        "D: { email: \"my@email.com\", address: undefined }"
+      ],
+      "questionAnswer": "Answer: C",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#154-whats-the-output"
+    },
+    {
+      "id": 155,
+      "questionTitle": "155. What's the output?",
+      "questionContent": "let randomValue = { name: \"Lydia\" }\nrandomValue = 23\n\nif (!typeof randomValue === \"string\") {\n\tconsole.log(\"It's not a string!\")\n} else {\n\tconsole.log(\"Yay it's a string!\")\n}",
+      "questionOptions": [
+        "A: It's not a string!",
+        "B: Yay it's a string!",
+        "C: TypeError",
+        "D: undefined"
+      ],
+      "questionAnswer": "Answer: B",
+      "questionLink": "https://github.com/lydiahallie/javascript-questions#155-whats-the-output"
+    }
+  ]
+}

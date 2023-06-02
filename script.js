@@ -1,5 +1,3 @@
-import axios from "axios";
-import { load } from "cheerio";
 import dotenv from "dotenv";
 import {
   Client,
@@ -8,6 +6,8 @@ import {
   ButtonStyle,
   ActionRowBuilder,
 } from "discord.js";
+import { fetchQuestions } from "./utils.js";
+import questionData from "./questions.json" assert { type: "json" };
 
 dotenv.config();
 
@@ -23,109 +23,75 @@ const client = new Client({
 client.login(process.env.DISCORD_TOKEN);
 
 const url = "https://github.com/lydiahallie/javascript-questions";
-let answer = "";
-let link = "";
+
+client.on("ready", async () => {
+  await fetchQuestions();
+});
 
 client.on("messageCreate", async (message) => {
   if (!message?.author.bot && message?.content === "!question") {
-    const {
-      questionAnswer,
-      questionContent,
-      questionLink,
-      questionOptions,
-      questionTitle,
-    } = await fetchQuestion();
+    const randomIndex = Math.floor(
+      Math.random() * questionData.questions.length
+    );
+    console.log("randomIndex", randomIndex);
+    const { questionContent, questionOptions, questionTitle } =
+      questionData.questions[randomIndex];
 
     const title = `** \`${questionTitle}\` **`;
-    const content = "```js\n" + questionContent + "\n```";
+    const content = !!questionContent
+      ? "```js\n" + questionContent + "\n```"
+      : "";
     const options = questionOptions
       .map((option) => `* \` ${option}\``)
       .join("\n");
 
-    const response = [title, content, options].join("\n");
-    answer = questionAnswer;
-    link = questionLink;
+    const response = [title, content, options].filter(Boolean).join("\n");
 
     const answerButton = new ButtonBuilder()
       .setStyle(ButtonStyle.Primary)
       .setLabel("Show Answer")
-      .setCustomId("show");
+      .setCustomId(`show-${randomIndex}`);
 
     const row = new ActionRowBuilder().addComponents([answerButton]);
 
     message.channel.send({
       content: response,
       components: [row],
-      ephemeral: true,
     });
   }
 });
 
 client.on("interactionCreate", async (interaction) => {
-  if (interaction.customId === "show") {
+  if (interaction.customId.startsWith("show")) {
+    const questionId = interaction.customId.split("-")[1];
+    const { questionLink, questionAnswer } = questionData.questions[questionId];
     const linkButton = new ButtonBuilder()
       .setStyle(ButtonStyle.Link)
       .setLabel("See explanation on github")
-      .setURL(link);
+      .setURL(questionLink || url);
     const row = new ActionRowBuilder().addComponents([linkButton]);
-    await interaction.reply({
-      content: answer,
-      components: [row],
-      ephemeral: true,
-    });
-    link = "";
-    answer = "";
+
+    try {
+      await interaction.deferReply({
+        ephemeral: true,
+      });
+      await interaction.editReply({
+        content: questionAnswer,
+        components: [row],
+      });
+    } catch (error) {
+      console.log("error in interaction", error);
+    }
   }
 });
 
-async function fetchQuestion() {
-  try {
-    const response = await axios.get(url);
-    const html = response.data;
-    const $ = load(html);
-
-    const questionTitleStructures = $('h6[tabindex="-1"][dir="auto"]');
-
-    const randomIndex = Math.floor(
-      Math.random() * questionTitleStructures.length
-    );
-    const questionTitleStructure = questionTitleStructures.eq(randomIndex);
-
-    const questionTitle = questionTitleStructure.text().trim();
-    const questionLink = url + questionTitleStructure.find("a").attr("href");
-
-    const questionContent = questionTitleStructure
-      .next("div")
-      .find("pre")
-      .text()
-      .trim();
-
-    const questionOptions = [];
-    const questionOptionsElements = questionTitleStructure
-      .next("div")
-      .next('ul[dir="auto"]')
-      .find("li");
-    questionOptionsElements.each((index, element) => {
-      const optionText = $(element).text().trim();
-      questionOptions.push(optionText);
-    });
-
-    const questionAnswer = questionTitleStructure
-      .next("div")
-      .next('ul[dir="auto"]')
-      .next("details")
-      .find("h4")
-      .text()
-      .trim();
-
-    return {
-      questionTitle,
-      questionContent,
-      questionOptions,
-      questionAnswer,
-      questionLink,
-    };
-  } catch (error) {
-    console.log(error);
-  }
-}
+client.on("disconnect", function (erMsg, code) {
+  console.log(
+    "----- Bot disconnected from Discord with code",
+    code,
+    "for reason:",
+    erMsg,
+    "-----"
+  );
+  client.connect();
+});
