@@ -1,1 +1,1 @@
-# discord-bot-javascript-interview-questions
+# Discord Bot Javascript-Interview-Questions

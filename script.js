@@ -35,7 +35,7 @@ client.on("messageCreate", async (message) => {
       questionOptions,
       questionTitle,
     } = await fetchQuestion();
-    console.log("questionTitle", questionTitle);
+
     const title = `** \`${questionTitle}\` **`;
     const content = "```js\n" + questionContent + "\n```";
     const options = questionOptions
@@ -56,6 +56,7 @@ client.on("messageCreate", async (message) => {
     message.channel.send({
       content: response,
       components: [row],
+      ephemeral: true,
     });
   }
 });
@@ -70,6 +71,7 @@ client.on("interactionCreate", async (interaction) => {
     await interaction.reply({
       content: answer,
       components: [row],
+      ephemeral: true,
     });
     link = "";
     answer = "";
@@ -127,129 +129,3 @@ async function fetchQuestion() {
     console.log(error);
   }
 }
-
-// async function fetchQuestion() {
-//   await axios
-//     .get(url)
-//     .then((response) => {
-//       const html = response.data;
-//       const $ = load(html);
-
-//       // Find all the question title structures and extract their text and link
-//       const questionTitleStructures = $('h6[tabindex="-1"][dir="auto"]');
-
-//       // Select a random question title structure
-//       const randomIndex = Math.floor(
-//         Math.random() * questionTitleStructures.length
-//       );
-//       const questionTitleStructure = questionTitleStructures.eq(randomIndex);
-
-//       // Extract the question title from the selected structure
-//       const questionTitle = questionTitleStructure.text().trim();
-
-//       // Extract the question link from the selected structure
-//       const questionLink = url + questionTitleStructure.find("a").attr("href");
-
-//       // Find the nearest pre element to the selected question title structure and extract its inner text
-//       const questionContent = questionTitleStructure
-//         .next("div")
-//         .find("pre")
-//         .text()
-//         .trim();
-
-//       // Find the question options under the question content
-//       const questionOptions = [];
-//       const questionOptionsElements = questionTitleStructure
-//         .next("div")
-//         .next('ul[dir="auto"]')
-//         .find("li");
-//       questionOptionsElements.each((index, element) => {
-//         const optionText = $(element).text().trim();
-//         questionOptions.push(optionText);
-//       });
-
-//       // Find the question answer under the question options
-//       const questionAnswer = questionTitleStructure
-//         .next("div")
-//         .next('ul[dir="auto"]')
-//         .next("details")
-//         .find("h4")
-//         .text()
-//         .trim();
-
-//       //   console.log("Question Title:", questionTitle);
-//       //   console.log("Question Content:", questionContent);
-//       //   console.log("Question Options:", questionOptions);
-//       //   console.log("Question Answer:", questionAnswer);
-//       //   console.log("Question Link:", questionLink);
-//       return {
-//         questionTitle,
-//         questionContent,
-//         questionOptions,
-//         questionAnswer,
-//         questionLink,
-//       };
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// }
-
-// axios
-//   .get(url)
-//   .then((response) => {
-//     const html = response.data;
-//     const $ = cheerio.load(html);
-
-//     // Find all the question title structures and extract their text and link
-//     const questionTitleStructures = $('h6[tabindex="-1"][dir="auto"]');
-
-//     // Select a random question title structure
-//     const randomIndex = Math.floor(
-//       Math.random() * questionTitleStructures.length
-//     );
-//     const questionTitleStructure = questionTitleStructures.eq(randomIndex);
-
-//     // Extract the question title from the selected structure
-//     const questionTitle = questionTitleStructure.text().trim();
-
-//     // Extract the question link from the selected structure
-//     const questionLink = url + questionTitleStructure.find("a").attr("href");
-
-//     // Find the nearest pre element to the selected question title structure and extract its inner text
-//     const questionContent = questionTitleStructure
-//       .next("div")
-//       .find("pre")
-//       .text()
-//       .trim();
-
-//     // Find the question options under the question content
-//     const questionOptions = [];
-//     const questionOptionsElements = questionTitleStructure
-//       .next("div")
-//       .next('ul[dir="auto"]')
-//       .find("li");
-//     questionOptionsElements.each((index, element) => {
-//       const optionText = $(element).text().trim();
-//       questionOptions.push(optionText);
-//     });
-
-//     // Find the question answer under the question options
-//     const questionAnswer = questionTitleStructure
-//       .next("div")
-//       .next('ul[dir="auto"]')
-//       .next("details")
-//       .find("h4")
-//       .text()
-//       .trim();
-
-//     // Print the question title, content, options, answer, and link
-//     console.log("Question Title:", questionTitle);
-//     console.log("Question Content:", questionContent);
-//     console.log("Question Options:", questionOptions);
-//     console.log("Question Answer:", questionAnswer);
-//     console.log("Question Link:", questionLink);
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   });
